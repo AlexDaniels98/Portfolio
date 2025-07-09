@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Event Page</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Awesome Company</h1>
+    <nav>
+      <ul>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#social">Social</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Event Section -->
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <div class="event-list">
+        <!-- Each event can be updated easily here -->
+        <article class="event">
+          <h3>Community Meetup</h3>
+          <p>Date: August 20, 2025</p>
+          <p>Location: Downtown Hall</p>
+          <p>Description: Join us for a fun and engaging community meetup!</p>
+        </article>
+        <article class="event">
+          <h3>Annual Gala</h3>
+          <p>Date: October 15, 2025</p>
+          <p>Location: City Center</p>
+          <p>Description: A night to remember with music, food, and celebration.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <form action="#" method="post">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+
+    <!-- Social Media Links -->
+    <section id="social">
+      <h2>Follow Us</h2>
+      <ul class="social-links">
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">Twitter</a></li>
+        <li><a href="#">Instagram</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Awesome Company. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
+/* styles.css */
+
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.event-list {
+  display: grid;
+  gap: 20px;
+}
+
+.event {
+  background: white;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form input,
+form textarea {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #eee;
+  margin-top: 20px;
+}
+
+/* Responsive Layout */
+@media (max-width: 600px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .event-list {
+    grid-template-columns: 1fr;
+  }
+}
